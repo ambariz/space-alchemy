@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://dra5clp12xjrh"]
+
+[ext_resource type="Script" uid="uid://bms6wfihdqbx5" path="res://scripts/game_manager.gd" id="1_o5qli"]
+
+[node name="Main" type="Node2D" unique_id=125645141]
+script = ExtResource("1_o5qli")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1565517063]
+offset_left = -45.0
+offset_top = -30.0
+offset_right = 1317.0
+offset_bottom = 743.0
+color = Color(0.03137255, 0.043137256, 0.09411765, 1)
+
+[node name="Workspace" type="Node2D" parent="." unique_id=1715877348]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=506688937]
+
+[node name="InventoryPanel" type="Panel" parent="UI" unique_id=1322323928]
+anchors_preset = -1
+anchor_left = 0.81700003
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.23999023
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 60)
+pivot_offset_ratio = Vector2(250, 720)
+
+[node name="InventoryTitle" type="Label" parent="UI/InventoryPanel" unique_id=987392816]
+layout_mode = 0
+offset_left = -218.0
+offset_top = 86.0
+offset_right = -113.0
+offset_bottom = 113.0
+text = "DISCOVERIES"
+
+[node name="InventoryScroll" type="ScrollContainer" parent="UI/InventoryPanel" unique_id=1875354673]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="InventoryGrid" type="GridContainer" parent="UI/InventoryPanel/InventoryScroll" unique_id=710149146]
+layout_mode = 2
+columns = 2
+
+[node name="SearchBar" type="LineEdit" parent="UI/InventoryPanel" unique_id=32651283]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.8970001
+anchor_right = 0.293
+anchor_bottom = 0.39000002
+offset_left = 166.89801
+offset_top = 6.0
+offset_right = 166.93799
+offset_bottom = 6.1999817
+placeholder_text = "Search discoveries..."
+
+[node name="TopBar" type="Panel" parent="UI" unique_id=1773780763]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.10300001
+offset_bottom = 0.2559967
+pivot_offset_ratio = Vector2(1280, 60)
+
+[node name="GameTitle" type="Label" parent="UI/TopBar" unique_id=933776148]
+layout_mode = 0
+offset_right = 1058.0
+offset_bottom = 177.0
+text = "SPACE ALCHEMY"
+
+[node name="DiscoveryCounter" type="Label" parent="UI/TopBar" unique_id=374277200]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 77.0
+offset_right = 118.0
+offset_bottom = 100.0
+text = "DISCOVERED: 0"
+
+[node name="ClearButton" type="Label" parent="UI/TopBar" unique_id=450854409]
+layout_mode = 0
+offset_left = 998.0
+offset_top = 29.0
+offset_right = 1148.0
+offset_bottom = 52.0
+text = "CLEAR WORKSPACE"
+
+[node name="SettingsButton" type="Button" parent="UI/TopBar" unique_id=1188403059]
+layout_mode = 0
+offset_left = 1182.0
+offset_top = 20.0
+offset_right = 1264.0
+offset_bottom = 51.0
+text = "SETTINGS"
+
+[node name="InfoPanel" type="Panel" parent="UI" unique_id=952972093]
+offset_left = 40.0
+offset_top = 328.0
+offset_right = 954.0
+offset_bottom = 673.0
+
+[node name="ObjectName" type="Label" parent="UI/InfoPanel" unique_id=2046792847]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Select an object."
+
+[node name="ObjectDescription" type="Label" parent="UI/InfoPanel" unique_id=612369090]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -30.0
+offset_right = 305.0
+offset_bottom = -7.0
+text = "Select a cosmic object to learn about it."
+
+[node name="CloseInfoButton" type="Button" parent="UI/InfoPanel" unique_id=1139225685]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "CLOSE"
